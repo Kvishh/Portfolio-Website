@@ -1,0 +1,90 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+p, h1, a{
+    color: white;
+}
+
+html {
+   height: 100%;
+}
+
+body{
+    background-color: #14151A;
+    min-width: 100vw;
+    min-height: 100%;
+}
+
+/* 
+Header/Navigation bar
+*/
+nav{
+    display: flex;
+    border: 1px solid white;
+    position: fixed;
+    gap: 1.4rem;
+    padding: .9rem 1.4rem;
+    border-radius: 20rem;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    padding: 20px;
+}
+
+/*
+Hero section
+*/
+.hero-section-container{
+    /* background-color: rgb(66, 37, 37); */
+    min-height: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.elements-container{
+    margin-left: 5rem;
+}
+.elements-container > h1{
+    font-size: 3rem;
+}
+.hero-name-bold{
+    font-weight: 950;
+}
+.hero-purple-text{
+    color: #8173E6;
+}
+.elements-container > p{
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.hero-links-container{
+    display: flex;
+    gap: 1rem;
+}
+.hero-contact-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+
+    background-color: #8173E6;
+    border-radius: 6px;
+    padding: .7rem;
+}
+.hero-contact-button > p{
+    font-size: 1.4rem;
+}
