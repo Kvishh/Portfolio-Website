@@ -5,18 +5,17 @@
     border: 0;
 }
 
-p, h1, a{
+p, h1, a, h2, h3{
     color: white;
 }
 
 html {
-   height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 body{
     background-color: #14151A;
-    min-width: 100vw;
-    min-height: 100%;
 }
 
 /* 
@@ -40,7 +39,7 @@ nav a{
 }
 
 main{
-    padding: 20px;
+    padding: 20px 120px;
 }
 
 /*
@@ -52,9 +51,6 @@ Hero section
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.elements-container{
-    margin-left: 5rem;
 }
 .elements-container > h1{
     font-size: 3rem;
@@ -79,7 +75,8 @@ Hero section
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 12rem;
+    width: 100%;
+    max-width: 12rem;
 
     background-color: #8173E6;
     border-radius: 6px;
@@ -87,4 +84,100 @@ Hero section
 }
 .hero-contact-button > p{
     font-size: 1.4rem;
+}
+
+/*
+About me section
+*/
+.about-me-section-container{
+    margin-top: 3rem;
+}
+.about-me-header-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.paragraphs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+.about-me-header-container>h2{
+    font-size: 2.5rem;
+}
+.about-me-section-container p{
+    font-size: 2rem;
+}
+.first-p-container{
+    max-width: 60rem;
+}
+.second-p-container{
+    max-width: 60rem;
+    margin-left: auto;
+}
+.second-p-container p{
+    text-align: right;
+}
+.third-p-container{
+    max-width: 60rem;
+}
+.purple-text{
+    color: #8173E6;
+}
+.carousel-container{
+    margin-top: 5rem;
+    padding: 2rem;
+    border: 2px solid green;
+}
+.carousel-header-container{
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    margin-bottom: 2.5rem;
+}
+#carousel-header{
+    font-size: 1.4rem;
+}
+.carousel{
+    border: 2px solid red;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+}
+.carousel::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, rgba(20, 21, 26, 0), rgb(20, 21, 26));
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.carousel::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(20, 21, 26, 0), rgb(20, 21, 26));
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    gap: 8rem;
+    animation: spin 10s infinite linear;
+    padding-right: 8rem;
+}
+@keyframes spin{
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+.group > svg{
+    flex-grow: 0;
+    flex-shrink: 0;
 }
