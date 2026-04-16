@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +8,7 @@
 }
 
 p, h1, a, h2, h3{
+    font-family: "Inter", sans-serif;
     color: white;
 }
 
@@ -40,17 +43,44 @@ nav a{
 
 main{
     padding: 20px 120px;
+    position: relative;
 }
 
 /*
 Hero section
 */
+#background-image-holder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 52rem;
+    background-image: url("assets/images/preview_2.png");
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -7rem;
+    transition: background-image linear .5s;
+}
+#background-image-holder::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(20, 21, 26, 0) 0, rgb(20, 21, 26) 95%);
+}
 .hero-section-container{
     /* background-color: rgb(66, 37, 37); */
     min-height: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.elements-container{
+    z-index: 2;
 }
 .elements-container > h1{
     font-size: 3rem;
