@@ -4,7 +4,6 @@ let index = 0
 function change_bg_image(){
     index = (index + 1) % bg_images.length
     document.querySelector("#background-image-holder").style.backgroundImage = `url(assets/images/${bg_images[index]})`;
-    console.log("hello")
 }
 
 setInterval(change_bg_image, 4000)

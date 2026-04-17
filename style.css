@@ -84,7 +84,7 @@ Hero section
     background: linear-gradient(to bottom, rgba(20, 21, 26, 0) 0, rgb(20, 21, 26) 95%);
 }
 .hero-section-container{
-    /* background-color: rgb(66, 37, 37); */
+    position: relative;
     min-height: 50rem;
     display: flex;
     flex-direction: column;
@@ -116,8 +116,11 @@ Hero section
 .elements-container{
     z-index: 2;
     display: flex;
+    flex-direction: column;
     margin-bottom: 40px;
-
+}
+.landing-container{
+    display: flex;
 }
 .elements-container h1{
     font-size: 3rem;
@@ -133,21 +136,47 @@ Hero section
 .hero-section-github-container a:hover{
     transform: scale(1.3);
 }
+.elements-container p{
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.pyblast-overview-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+.pyblast-overview-container p{
+    font-size: 1.5rem;
+}
+.pyblast-overview-container .texts-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+}
+.gif-container div{
+    /* border: 2px solid red; */
+    border-radius: 10px;
+}
+.gif-container .gif{
+    width: 800px;
+    height: 600px;
+    background-image: url("assets/gifs/gameplay.gif");
+    background-position: 40% 30%;
+}
 /* .hero-name-bold{
     font-weight: 950;
 }
 .hero-purple-text{
     color: #8173E6;
 } */
-.elements-container p{
-    font-size: 2rem;
-    margin-top: 10px;
-}
-.hero-links-container{
+/* .hero-links-container{
     display: flex;
     gap: 1rem;
-}
-.hero-contact-button{
+} */
+/* .hero-contact-button{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,7 +190,7 @@ Hero section
 }
 .hero-contact-button > p{
     font-size: 1.4rem;
-}
+} */
 
 /*
 About me section
