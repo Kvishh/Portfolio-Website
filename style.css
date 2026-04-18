@@ -12,7 +12,7 @@
     border: 0;
 }
 
-p, h1, a, h2, h3{
+p, h1, a, h2, h3, h4{
     font-family: "Public Sans", sans-serif;
     color: white;
 }
@@ -121,11 +121,10 @@ Hero section
     z-index: 2;
     display: flex;
     flex-direction: column;
-    margin-bottom: 40px;
 }
 .landing-container{
     display: flex;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 .elements-container h1{
     font-size: 3rem;
@@ -203,7 +202,7 @@ About me section
 */
 .about-me-section-container{
     position: relative;
-    padding: 20px 120px;
+    padding: 3rem 120px;
     margin-top: 5rem;
     background-color: #1c1f2e;
     z-index: 3;
@@ -211,8 +210,7 @@ About me section
 .about-me-header-container{
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 }
 .paragraphs-container{
     display: flex;
@@ -242,11 +240,31 @@ About me section
     color: #8173E6;
 }
 .carousel-container{
+    position: relative;
     margin-top: 5rem;
     padding: 2rem;
     border-radius: 10px;
     border: 1px solid rgb(90 90 90);
     background-color: #121522;
+}
+.carousel-container::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, .04), transparent 60%);
+    transition: opacity .5s;
+    opacity: 0;
+    z-index: 3;
+}
+.carousel-container:hover::before{
+    opacity: 1;
 }
 .carousel-header-container{
     display: inline-flex;
@@ -304,4 +322,83 @@ About me section
 .group > svg{
     flex-grow: 0;
     flex-shrink: 0;
+}
+
+/*
+Certification section
+ */
+.certification-container{
+    position: relative;
+    padding: 3rem 120px;
+    background-color: #2c3256;
+    z-index: 3;
+}
+.certification-header-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.certification-header{
+    font-size: 2.5rem;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    /* border: 2px solid rgb(105, 105, 105); */
+    position: relative;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5A557E;
+}
+.card *{
+    z-index: 3;
+}
+.card::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 60%);
+    transition: opacity .5s;
+    opacity: 0;
+    z-index: 3;
+}
+.card:hover::before{
+    opacity: 1;
+}
+#java-associate-logo{
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 1rem;
+}
+.card-text-header-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 1.7rem;
+    max-width: 300px;
+    gap: .2rem;
+}
+#java-associate-header{
+    font-size: 1.7rem;
+    /* color: #b7dcff; */
+}
+#organization{
+    font-size: 1.2rem;
+}
+.card-description-container{
+    max-width: 16rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
 }
