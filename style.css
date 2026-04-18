@@ -43,7 +43,7 @@ nav{
     top: 90%;
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: 99;
+    z-index: 999;
     background-color: #14151A;
 }
 nav a{
@@ -53,13 +53,17 @@ nav a{
 }
 
 main{
-    padding: 20px 120px;
     position: relative;
 }
 
 /*
 Hero section
 */
+.game-landing-section{
+    padding: 0 120px;
+    margin-bottom: 2rem;
+    z-index: 0;
+}
 #background-image-holder{
     position: absolute;
     top: 0;
@@ -81,7 +85,7 @@ Hero section
     z-index: 1;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(20, 21, 26, 0) 0, rgb(20, 21, 26) 95%);
+    background: linear-gradient(to bottom, rgba(20, 21, 26, 0) 0, rgb(20, 21, 26) 85%);
 }
 .hero-section-container{
     position: relative;
@@ -121,6 +125,7 @@ Hero section
 }
 .landing-container{
     display: flex;
+    margin-bottom: 80px;
 }
 .elements-container h1{
     font-size: 3rem;
@@ -128,6 +133,7 @@ Hero section
 .hero-section-github-container{
     margin-left: auto;
     align-self: self-end;
+    z-index: 2;
 }
 .hero-section-github-container a{
     display: block;
@@ -161,10 +167,10 @@ Hero section
     border-radius: 10px;
 }
 .gif-container .gif{
-    width: 800px;
+    width: 650px;
     height: 600px;
     background-image: url("assets/gifs/gameplay.gif");
-    background-position: 40% 30%;
+    background-position: 35% 30%;
 }
 /* .hero-name-bold{
     font-weight: 950;
@@ -196,23 +202,28 @@ Hero section
 About me section
 */
 .about-me-section-container{
-    margin-top: 3rem;
+    position: relative;
+    padding: 20px 120px;
+    margin-top: 5rem;
+    background-color: #1c1f2e;
+    z-index: 3;
 }
 .about-me-header-container{
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
 }
 .paragraphs-container{
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
 }
 .about-me-header-container>h2{
     font-size: 2.5rem;
 }
 .about-me-section-container p{
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 .first-p-container{
     max-width: 60rem;
@@ -233,19 +244,26 @@ About me section
 .carousel-container{
     margin-top: 5rem;
     padding: 2rem;
-    border: 2px solid green;
+    border-radius: 10px;
+    border: 1px solid rgb(90 90 90);
+    background-color: #121522;
 }
 .carousel-header-container{
-    display: inline-block;
-    padding: 1rem 3rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .8rem 2rem;
     border-radius: 10rem;
     margin-bottom: 2.5rem;
+    border: 1px solid rgb(90 90 90);
+    background-color: #1c1f2e;
 }
 #carousel-header{
-    font-size: 1.4rem;
+    display: inline-block;
+    font-size: 1.1rem;
 }
 .carousel{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     overflow-x: auto;
     position: relative;
@@ -254,7 +272,7 @@ About me section
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to left, rgba(20, 21, 26, 0), rgb(20, 21, 26));
+    background: linear-gradient(to left, rgba(18, 21, 34, 0), rgb(18, 21, 34));
     width: 10rem;
     height: 100%;
     content: "";
@@ -264,7 +282,7 @@ About me section
     position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(to right, rgba(20, 21, 26, 0), rgb(20, 21, 26));
+    background: linear-gradient(to right, rgba(18, 21, 34, 0), rgb(18, 21, 34));
     width: 10rem;
     height: 100%;
     content: "";

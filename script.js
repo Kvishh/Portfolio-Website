@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const bg_images = ["preview_2.png", "preview_3.png",  "preview_4.png", "preview_5.png", "preview_6.png", "preview_7.png"]
 let index = 0
 
@@ -7,3 +9,13 @@ function change_bg_image(){
 }
 
 setInterval(change_bg_image, 4000)
+
+gsap.to(".game-landing-section", {
+    scrollTrigger: {
+        trigger: ".game-landing-section",
+        start: "bottom+=50px bottom",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: false
+    },
+})
