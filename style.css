@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap');
 
 @font-face{
     font-family: Marioworld;
@@ -311,9 +312,9 @@ About me section
 }
 .group{
     display: flex;
-    gap: 8rem;
+    gap: 6rem;
     animation: spin 10s infinite linear;
-    padding-right: 8rem;
+    padding-right: 6rem;
 }
 @keyframes spin{
     from {translate: 0;}
@@ -322,6 +323,11 @@ About me section
 .group > svg{
     flex-grow: 0;
     flex-shrink: 0;
+}
+#technologies-description{
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.723);
 }
 
 /*
@@ -346,14 +352,16 @@ Certification section
     justify-content: center;
 }
 .card{
-    /* border: 2px solid rgb(105, 105, 105); */
+    border: 2px solid rgb(105, 105, 105);
     position: relative;
     border-radius: 10px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #5A557E;
+    background-color: #4c486b;
+    background: linear-gradient(to bottom, #8a83c2, #34297d);
+    transition: transform .3s;
 }
 .card *{
     z-index: 3;
@@ -377,6 +385,9 @@ Certification section
 .card:hover::before{
     opacity: 1;
 }
+.card:hover{
+    transform: scale(1.05);
+}
 #java-associate-logo{
     max-width: 100px;
     max-height: 100px;
@@ -392,7 +403,6 @@ Certification section
 }
 #java-associate-header{
     font-size: 1.7rem;
-    /* color: #b7dcff; */
 }
 #organization{
     font-size: 1.2rem;
@@ -401,4 +411,133 @@ Certification section
     max-width: 16rem;
     text-align: center;
     margin-bottom: 3.5rem;
+}
+.card-description-container p{
+    font-size: 1.1rem;
+}
+
+/* 
+Projects container
+*/
+.projects-container{
+    background-color: #1c1f2e;
+    padding: 3rem 120px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects-header-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+.projects-header{
+    font-size: 2.5rem;
+}
+.projects-cards-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.project-card-wrapper{
+    max-width: 100%;
+}
+.project-card-container{
+    border: 2px solid #434b76;
+    border-radius: 6px;
+    display: flex;
+    max-width: 100%;
+    background-color: #292e4c;
+}
+.project-description-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+    padding: 2rem;
+}
+.project-texts-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.project-sub-heading{
+    font-family: "Google Sans Code", monospace;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(218, 218, 218);
+    margin-bottom: .7rem;
+}
+.project-title-heading{
+    font-size: 2.4rem;
+    margin-bottom: .5rem;
+}
+.project-decscription-text{
+    font-size: 1.3rem;
+    color: rgb(179, 179, 179);
+    margin-bottom: 2rem;
+}
+.tech-stack-container{
+    display: flex;
+    justify-content: space-around;
+}
+.tech-stack-container p{
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(226, 226, 226);
+}
+.project-card-links-container{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-top: auto;
+}
+.project-link{
+    display: inline-block;
+    transition: transform .2s;
+}
+.project-link:hover{
+    transform: scale(.8);
+}
+.project-image-container{
+    display: flex;
+    padding: 1rem;
+    width: 55rem;
+    max-width: 100%;
+}
+.project-image-wrapper{
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+#project1-preview-image{
+    object-fit: cover;
+    object-position: -130px 0;
+    max-width: 70rem;
+}
+#project2-preview-image{
+    object-fit: cover;
+    object-position: -120px 0;
+    max-width: 70rem;
+}
+#project3-preview-image{
+    object-fit: cover;
+    object-position: -130px 0;
+    max-width: 70rem;
+}
+#explore-more-button{
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 1.1rem 3rem;
+    border-radius: 10px;
+    background-color: #8173E6;
+    text-decoration: none;
+    transition: background-color .2s;
+}
+#explore-more-button:hover{
+    background-color: #a094ff;
 }

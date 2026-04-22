@@ -1,4 +1,6 @@
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener("DOMContentLoaded", (e)=>{
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+})
 
 const bg_images = ["preview_2.png", "preview_3.png",  "preview_4.png", "preview_5.png", "preview_6.png", "preview_7.png"]
 let index = 0
@@ -32,6 +34,7 @@ card.addEventListener("mousemove", (e)=>{
 
 setInterval(change_bg_image, 4000)
 
+
 gsap.to(".game-landing-section", {
     scrollTrigger: {
         trigger: ".game-landing-section",
@@ -41,3 +44,39 @@ gsap.to(".game-landing-section", {
         pinSpacing: false
     },
 })
+
+ScrollSmoother.create({
+	smooth: .8,
+	effects: true,
+	smoothTouch: 0.1
+});
+
+
+ScrollTrigger.create({
+    trigger: ".projects-header-container",
+    start: "top-=10 top",
+    end: "bottom+=2240 bottom",
+    pin: true
+})
+
+const cardWrappers = gsap.utils.toArray(".project-card-wrapper")
+const cards = gsap.utils.toArray(".project-card-container")
+
+cardWrappers.forEach((wrapper, i) => {
+    const card = cards[i];
+    
+    const scale = .9 + .03 * i
+
+    gsap.to(card, {
+        scale: scale,
+        scrollTrigger: {
+            trigger: wrapper,
+            start: "top " + (80 + 50 * i),
+            end: "bottom+=20 800",
+            endTrigger: ".projects-cards-container",
+            pin: wrapper,
+            invalidateOnRefresh: true,
+            scrub: true,
+        }
+    });
+});
