@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
     <script type="module" src="./script.js"></script>
 </head>
 <body>
@@ -60,14 +61,18 @@
             </section>
             <section class="pyblast-overview-container">
                 <div class="texts-container">
-                    <p>
-                        PyBlast is a survival roguelike game where you defeat horde of enemies and try to survive for 10 minutes.
-                        Defeat enemies and level up to obtain upgrades that will help you last long in the cave.
-                    </p>
-                    <p>
-                        Equipped with dashing to escape enemies and slowing time down to avoid enemies' projectiles, try to fight
-                        with the abilities you picked along the way against the endless horde of enemies coming to kill you.
-                    </p>
+                    <div class="overview-p-container">
+                        <p>
+                            PyBlast is a survival roguelike game where you defeat horde of enemies and try to survive for 10 minutes.
+                            Defeat enemies and level up to obtain upgrades that will help you last long in the cave.
+                        </p>
+                    </div>
+                    <div class="overview-p-container">
+                        <p>
+                            Equipped with dashing to escape enemies and slowing time down to avoid enemies' projectiles, try to fight
+                            with the abilities you picked along the way against the endless horde of enemies coming to kill you.
+                        </p>
+                    </div>
                 </div>
                 <div class="gif-container">
                     <div class="gif"></div>
@@ -76,16 +81,16 @@
         </div>
         <section class="about-me-section-container">
             <div class="about-me-header-container">
-                <h2>About me</h2>
+                <h2 class="about-me-heading section-heading">About me</h2>
             </div>
             <div class="paragraphs-container">
-                <div class="first-p-container">
+                <div class="first-p-container about-me-to-right-p">
                     <p>I am, Kelvish Vargas, a student currently pursuing Bachelor of Science in Information Technology majoring in <span class="purple-text">Network Infrastructure with Cybersecurity</span> at Universidad de Dagupan.</p>
                 </div>
-                <div class="second-p-container">
+                <div class="second-p-container about-me-to-left-p">
                     <p>I have <span class="purple-text">deep curiosity in Network Infrastructure and passion for Cybersecurity</span>. I’m mainly intrigued by how data travel from devices to devices. This also piqued my  interest in how interconnection exposes danger to end-users.</p>
                 </div>
-                <div class="third-p-container">
+                <div class="third-p-container about-me-to-right-p">
                     <p>I have <span class="purple-text">Java Foundation Associate</span> certification from Oracle. I have created several projects including a <span class="purple-text">Task Management System with Java</span>, and the others were design challenges from website Frontend mentor. </p>
                 </div>
             </div>
@@ -123,7 +128,7 @@
         </section>
         <section class="certification-container">
             <div class="certification-header-container">
-                <h2 class="certification-header">Certifications</h2>
+                <h2 class="certification-header section-heading">Certifications</h2>
             </div>
             <div class="cards-container">
                 <div class="card">
@@ -145,7 +150,7 @@
         </section>
         <section class="projects-container">
             <div class="projects-header-container">
-                <h2 class="projects-header">Projects</h2>
+                <h2 class="projects-header section-heading">Projects</h2>
             </div>
             <div class="projects-cards-container">
                 <div class="project-card-wrapper">
@@ -246,7 +251,7 @@
             <a id="explore-more-button" href="#">Explore more</a>
         </section>
         <section class="contact-container">
-            <div class="contact-heading-container">
+            <div class="contact-heading-container section-heading">
                 <h2 id="contact-heading">Contact</h2>
             </div>
             <div class="contact-text-container">

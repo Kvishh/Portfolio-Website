@@ -170,7 +170,6 @@ Hero section
     gap: 4rem;
 }
 .gif-container div{
-    /* border: 2px solid red; */
     border-radius: 10px;
 }
 .gif-container .gif{
@@ -194,6 +193,7 @@ About me section
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    overflow: hidden;
 }
 .paragraphs-container{
     display: flex;

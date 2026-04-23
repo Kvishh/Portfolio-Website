@@ -1,6 +1,17 @@
 document.addEventListener("DOMContentLoaded", (e)=>{
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 })
+
+window.onload = () => {
+    gsap.fromTo(".landing-container", {
+        opacity: 0,
+        yPercent: 60
+    }, {
+        opacity: 1,
+        yPercent: 0,
+    })
+}
+
 
 const bg_images = ["preview_2.png", "preview_3.png",  "preview_4.png", "preview_5.png", "preview_6.png", "preview_7.png"]
 let index = 0
@@ -32,7 +43,7 @@ card.addEventListener("mousemove", (e)=>{
     card.style.setProperty("--mouse-y", `${y}px`)
 })
 
-setInterval(change_bg_image, 4000)
+setInterval(change_bg_image, 4000);
 
 
 gsap.to(".game-landing-section", {
@@ -59,8 +70,8 @@ ScrollTrigger.create({
     pin: true
 })
 
-const cardWrappers = gsap.utils.toArray(".project-card-wrapper")
-const cards = gsap.utils.toArray(".project-card-container")
+const cardWrappers = gsap.utils.toArray(".project-card-wrapper");
+const cards = gsap.utils.toArray(".project-card-container");
 
 cardWrappers.forEach((wrapper, i) => {
     const card = cards[i];
@@ -87,6 +98,84 @@ gsap.to("footer", {
         trigger: ".contact-container",
         start: "bottom+=25% bottom",
         end: "+=50%",
+        scrub: true,
+    }
+})
+
+const overviewParagraphsContainer = gsap.utils.toArray(".overview-p-container p");
+overviewParagraphsContainer.forEach((p, i) => {
+    gsap.fromTo(p, {
+        opacity: .2,
+        yPercent: 100,
+    }, {
+        opacity: 1,
+        yPercent: 0,
+        scrollTrigger: {
+            trigger: p,
+            start: "top bottom",
+            end: "bottom+=20 bottom",
+            scrub: true,
+        }
+    })
+})
+
+const sectionHeading = gsap.utils.toArray(".section-heading");
+sectionHeading.forEach((heading, i)=>{
+    gsap.fromTo(heading, {
+        opacity: .2,
+        yPercent: 100,
+    }, {
+        opacity: 1,
+        yPercent: 0,
+        scrollTrigger: {
+            trigger: heading,
+            start: "top bottom",
+            end: "bottom+=100 bottom",
+            scrub: true,
+        }
+    })
+})
+
+const aboutMeToLeftParagraphs = gsap.utils.toArray(".about-me-to-right-p");
+aboutMeToLeftParagraphs.forEach((p, i) => {
+    gsap.fromTo(p, {
+        opacity: 0,
+        xPercent: -100
+    }, {
+        opacity: 1,
+        xPercent: 0,
+        scrollTrigger: {
+            trigger: p,
+            start: "top bottom-=150",
+            end: "bottom+=150 bottom",
+            scrub: true,
+        }
+    })
+})
+gsap.fromTo(".about-me-to-left-p", {
+    opacity: 0,
+    xPercent: 100
+}, {
+    opacity: 1,
+    xPercent: 0,
+    scrollTrigger: {
+        trigger: ".about-me-to-left-p",
+        start: "top bottom-=150",
+        end: "bottom+=150 bottom",
+        scrub: true,
+    }
+})
+
+gsap.fromTo("#contact-text", {
+    opacity: .2,
+    yPercent: 100,
+}, {
+    opacity: 1,
+    yPercent: 0,
+    scrollTrigger: {
+        trigger: "#contact-text",
+        start: "top bottom",
+        end: "bottom+=100 bottom",
         scrub: true,
     }
 })
