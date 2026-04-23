@@ -55,6 +55,12 @@ nav a{
 
 main{
     position: relative;
+    /* z-index: 5; */
+}
+#smooth-content{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 29rem;
 }
 
 /*
@@ -173,31 +179,6 @@ Hero section
     background-image: url("assets/gifs/gameplay.gif");
     background-position: 35% 30%;
 }
-/* .hero-name-bold{
-    font-weight: 950;
-}
-.hero-purple-text{
-    color: #8173E6;
-} */
-/* .hero-links-container{
-    display: flex;
-    gap: 1rem;
-} */
-/* .hero-contact-button{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 12rem;
-
-    background-color: #8173E6;
-    border-radius: 6px;
-    padding: .7rem;
-}
-.hero-contact-button > p{
-    font-size: 1.4rem;
-} */
 
 /*
 About me section
@@ -635,10 +616,11 @@ footer{
     position: fixed;
     height: 29rem;
     width: 100%;
-    z-index: -1;
+    z-index: 10;
     bottom: 0;
     left: 0;
     background-color: #14151A;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 .footer-content-container{
     display: flex;

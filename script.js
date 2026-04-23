@@ -80,3 +80,13 @@ cardWrappers.forEach((wrapper, i) => {
         }
     });
 });
+
+gsap.to("footer", {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    scrollTrigger: {
+        trigger: ".contact-container",
+        start: "bottom+=25% bottom",
+        end: "+=50%",
+        scrub: true,
+    }
+})
