@@ -55,7 +55,7 @@ mm.add("(min-width: 1201px)", () => {
             end: "bottom top-=70px",
             pin: true,
             pinSpacing: false,
-            markers: true
+            // markers: true
         },
     })
 })
@@ -84,11 +84,11 @@ mmProjectHeading.add("(min-width: 1201px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=2240 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 mmProjectHeading.add("(max-width: 1200px) and (min-width: 1181px)", ()=>{
@@ -97,11 +97,11 @@ mmProjectHeading.add("(max-width: 1200px) and (min-width: 1181px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=1980 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 mmProjectHeading.add("(max-width: 1181px) and (min-width: 1146px)", ()=>{
@@ -110,11 +110,11 @@ mmProjectHeading.add("(max-width: 1181px) and (min-width: 1146px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=2110 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 mmProjectHeading.add("(max-width: 1145px) and (min-width: 1045px)", ()=>{
@@ -123,11 +123,11 @@ mmProjectHeading.add("(max-width: 1145px) and (min-width: 1045px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=2880 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 mmProjectHeading.add("(max-width: 1044px) and (min-width: 906px)", ()=>{
@@ -136,11 +136,11 @@ mmProjectHeading.add("(max-width: 1044px) and (min-width: 906px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=2350 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 mmProjectHeading.add("(max-width: 905px) and (min-width: 551px)", ()=>{
@@ -149,11 +149,11 @@ mmProjectHeading.add("(max-width: 905px) and (min-width: 551px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=2620 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 mmProjectHeading.add("(max-width: 550px)", ()=>{
@@ -162,11 +162,11 @@ mmProjectHeading.add("(max-width: 550px)", ()=>{
         start: "top-=10 top",
         end: "bottom+=2140 bottom",
         pin: true,
-        markers: {
-            startColor: "yellow",
-            endColor: "pink",
-            indent: 40
-        }
+        // markers: {
+        //     startColor: "yellow",
+        //     endColor: "pink",
+        //     indent: 40
+        // }
     })
 })
 
@@ -189,7 +189,7 @@ cardWrappers.forEach((wrapper, i) => {
             pin: wrapper,
             invalidateOnRefresh: true,
             scrub: true,
-            markers: true
+            // markers: true
         }
     });
 });
