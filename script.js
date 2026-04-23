@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", (e)=>{
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 })
 
 window.onload = () => {
@@ -46,14 +46,29 @@ card.addEventListener("mousemove", (e)=>{
 setInterval(change_bg_image, 4000);
 
 
-gsap.to(".game-landing-section", {
-    scrollTrigger: {
-        trigger: ".game-landing-section",
-        start: "bottom+=50px bottom",
-        end: "bottom top-=70px",
-        pin: true,
-        pinSpacing: false
-    },
+const mm = gsap.matchMedia();
+mm.add("(min-width: 1201px)", () => {
+    gsap.to(".game-landing-section", {
+        scrollTrigger: {
+            trigger: ".game-landing-section",
+            start: "bottom+=50px bottom",
+            end: "bottom top-=70px",
+            pin: true,
+            pinSpacing: false,
+            markers: true
+        },
+    })
+})
+mm.add("(max-width: 1200px)", () => {
+    gsap.to(".game-landing-section", {
+        scrollTrigger: {
+            trigger: ".game-landing-section",
+            start: "bottom+=50px bottom",
+            end: "bottom top-=300px",
+            pin: true,
+            pinSpacing: false,
+        },
+    })
 })
 
 ScrollSmoother.create({
@@ -62,17 +77,103 @@ ScrollSmoother.create({
 	smoothTouch: 0.1
 });
 
-
-ScrollTrigger.create({
-    trigger: ".projects-header-container",
-    start: "top-=10 top",
-    end: "bottom+=2240 bottom",
-    pin: true
+const mmProjectHeading = gsap.matchMedia();
+mmProjectHeading.add("(min-width: 1201px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=2240 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
+})
+mmProjectHeading.add("(max-width: 1200px) and (min-width: 1181px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=1980 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
+})
+mmProjectHeading.add("(max-width: 1181px) and (min-width: 1146px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=2110 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
+})
+mmProjectHeading.add("(max-width: 1145px) and (min-width: 1045px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=2880 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
+})
+mmProjectHeading.add("(max-width: 1044px) and (min-width: 906px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=2350 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
+})
+mmProjectHeading.add("(max-width: 905px) and (min-width: 551px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=2620 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
+})
+mmProjectHeading.add("(max-width: 550px)", ()=>{
+    ScrollTrigger.create({
+        trigger: ".projects-header-container",
+        start: "top-=10 top",
+        end: "bottom+=2140 bottom",
+        pin: true,
+        markers: {
+            startColor: "yellow",
+            endColor: "pink",
+            indent: 40
+        }
+    })
 })
 
 const cardWrappers = gsap.utils.toArray(".project-card-wrapper");
 const cards = gsap.utils.toArray(".project-card-container");
 
+const mmProjectsCards = gsap.matchMedia();
 cardWrappers.forEach((wrapper, i) => {
     const card = cards[i];
     
@@ -88,6 +189,7 @@ cardWrappers.forEach((wrapper, i) => {
             pin: wrapper,
             invalidateOnRefresh: true,
             scrub: true,
+            markers: true
         }
     });
 });
