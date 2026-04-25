@@ -1157,3 +1157,31 @@ Projects page
         padding: 4rem 2rem;
     }
 }
+
+
+/* 
+Certifications page
+*/
+.certs-page-certification-container{
+    padding-bottom: 10rem;
+}
+#certs-footer{
+    padding: 4rem 8rem;
+    position: fixed;
+    height: 29rem;
+    max-width: 1600px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #14151A;
+}
+@media screen and (max-width: 550px) {
+    #certs-footer{
+        padding: 4rem 5rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    #certs-footer{
+        padding: 4rem 2rem;
+    }
+}
