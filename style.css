@@ -41,9 +41,7 @@ Media query min width 1600px
 
 
 */
-/* @media screen and (min-width: 1600px) and (min-height: 856px){ */
-/* @media screen and (min-width: 1300px) and (min-height: 856px){ */
-@media screen and (max-width: 1600px) and (min-height: 856px){
+@media screen and (max-width: 1600px){
     /* 
     Header/Navigation bar
     */
@@ -965,5 +963,197 @@ Media query min width 1506
     }
     footer{
         padding: 5rem 2rem;
+    }
+}
+
+/* 
+
+
+Projects page
+
+
+*/
+
+.project-page-main{
+    max-width: 1583.33px;
+    background-color: #1c1f2e;
+}
+.project-page-section{
+    padding: 0 120px;
+    margin-bottom: 10rem;
+}
+.project-page-heading-container{
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+.project-page-heading{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.projects-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.grid-item{
+    background-color: #292e4c;
+    border: 2px solid #434b76;
+    border-radius: 6px;
+}
+.grid-child-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.grid-child-image-container{
+    height: 240px;
+    max-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 1rem;
+}
+.grid-child-image{
+    /* width: 110%; */
+    width: 401.78px;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0 5px 70px -20px black;
+    /* box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; */
+}
+.grid-child-description-container{
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.grid-child-subheading{
+    font-size: 1.2rem;
+    font-family: "Google Sans Code", monospace;
+    margin-bottom: .4rem;
+    color: rgb(218, 218, 218);
+}
+.grid-child-title{
+    font-size: 2.4rem;
+    margin-bottom: .8rem;
+}
+.grid-child-project-description{
+    font-size: 1.2rem;
+    color: rgb(179, 179, 179);
+    margin-bottom: 1.6rem;
+}
+.grid-child-tech-stacks-container{
+    display: flex;
+    justify-content: space-around;
+}
+.grid-child-github-link, .grid-child-project-redirect{
+    display: inline-block;
+    transition: transform .2s;
+}
+.grid-child-github-link:hover, .grid-child-project-redirect:hover{
+    transform: scale(.8);
+}
+.project-page-github-icon, .project-page-redirect-icon{
+    width: 40px;
+}
+.grid-child-links-container{
+    margin-top: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 1rem;
+}
+#project-footer{
+    padding: 4rem 8rem;
+    position: fixed;
+    height: 29rem;
+    max-width: 1600px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #14151A;
+}
+
+@media screen and (max-width: 1250px){
+    .projects-grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 950px){
+    .grid-child-subheading{
+        font-size: 1rem;
+    }
+    .grid-child-title{
+        font-size: 2rem;
+    }
+    .grid-child-project-description{
+        font-size: 1rem;
+    }
+    .grid-child-tech-stacks-container p{
+        font-size: .8rem;
+    }
+    .project-page-github-icon, .project-page-redirect-icon{
+        width: 30px;
+    }
+    .grid-child-image-container{
+        height: 200px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .grid-child-image-container{
+        height: 120px;
+    }
+    .grid-child-subheading {
+        font-size: .6rem;
+    }
+    .grid-child-title{
+        font-size: 1.6rem;
+    }
+    .grid-child-project-description{
+        font-size: .6rem;
+    }
+    .grid-child-tech-stacks-container p{
+        font-size: .4rem;
+    }
+    .project-page-github-icon, .project-page-redirect-icon{
+        width: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .project-page-section{
+        padding: 0 60px;
+    }
+}
+@media screen and (max-width: 600px){
+    .projects-grid-container{
+        grid-template-columns: 1fr;
+    }
+    .grid-child-image-container{
+        height: auto;
+    }
+}
+@media screen and (max-width: 550px) {
+    #project-footer{
+        padding: 4rem 5rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .grid-child-title{
+        font-size: 1rem;
+    }
+    .grid-child-image-container{
+        padding: .6rem;
+    }
+    .grid-child-description-container{
+        padding: .6rem .6rem;
+    }
+    .grid-child-links-container{
+        padding: .6rem 1.2rem;
+    }
+    #project-footer{
+        padding: 4rem 2rem;
     }
 }
