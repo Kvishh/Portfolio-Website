@@ -1,5 +1,26 @@
 document.addEventListener("DOMContentLoaded", (e)=>{
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    window.onload = () => {
+        gsap.fromTo(".project-page-heading", {
+            opacity: 0,
+            yPercent: 60
+        }, {
+            opacity: 1,
+            yPercent: 0,
+        })
+        
+        const gridItems = gsap.utils.toArray(".grid-item");
+        gridItems.forEach((item, i )=> {
+            gsap.fromTo(item, {
+                opacity: 0,
+                yPercent: 60
+            }, {
+                opacity: 1,
+                yPercent: 0
+            })
+        });
+    }
     
     ScrollSmoother.create({
         smooth: .8,
