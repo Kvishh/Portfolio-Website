@@ -1185,3 +1185,44 @@ Certifications page
         padding: 4rem 2rem;
     }
 }
+
+
+/* 
+About me page
+*/
+.about-page-main-section{
+    padding: 0 120px;
+    background-color: #1c1f2e;
+}
+.about-page-heading-container{
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+}
+.about-page-heading{
+    font-size: 2.5rem;
+}
+.about-page-paragraphs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.about-page-paragraphs-container p{
+    font-size: 1.6rem;
+}
+.about-page-carousel-container{
+    margin-bottom: 10rem;
+}
+@media screen and (max-width: 700px){
+    .about-page-main-section{
+        padding: 0 60px;
+    }
+    .about-page-paragraphs-container p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .about-page-paragraphs-container p{
+        font-size: .8rem;
+    }
+}

@@ -7,44 +7,45 @@ document.addEventListener("DOMContentLoaded", (e)=>{
         smoothTouch: 0.1
     });
 
-    window.onload = () => {
-        gsap.fromTo(".certification-header-container", {
+    window.onload = ()=>{
+        gsap.fromTo(".about-page-heading",  {
             opacity: 0,
             yPercent: 60
         }, {
             opacity: 1,
-            yPercent: 0,
+            yPercent: 0
+        });
+
+        const paragraphs = gsap.utils.toArray(".about-page-paragraphs-container p");
+        paragraphs.forEach((p, i)=>{
+            gsap.fromTo(p,  {
+                opacity: 0,
+                yPercent: 60
+            }, {
+                opacity: 1,
+                yPercent: 0
+            });
         })
-        
-        gsap.fromTo(".cards-container", {
+
+        gsap.fromTo(".carousel-container", {
             opacity: 0,
-            yPercent: 30
+            yPercent: 40
         }, {
             opacity: 1,
             yPercent: 0
-        })
+        });
     }
-
-    const card = document.querySelector(".card")
-    card.addEventListener("mousemove", (e)=>{
-        const rect = e.currentTarget.getBoundingClientRect();
-    
-        const x = e.clientX - rect.left
-        const y = e.clientY - rect.top
-    
-        card.style.setProperty("--mouse-x", `${x}px`)
-        card.style.setProperty("--mouse-y", `${y}px`)
-    })
 
     gsap.to("footer", {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         scrollTrigger: {
-            trigger: ".certs-page-main",
+            trigger: ".about-page-main-section",
             start: "bottom-=28% bottom",
             end: "+=50%",
             scrub: true,
         }
-    })
+    });
+
 
     let oldScroll = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -64,4 +65,4 @@ document.addEventListener("DOMContentLoaded", (e)=>{
         }
         oldScroll = st <= 0 ? 0 : st;
     }, false);
-});
+})

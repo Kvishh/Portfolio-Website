@@ -36,5 +36,24 @@ document.addEventListener("DOMContentLoaded", (e)=>{
             end: "+=50%",
             scrub: true,
         }
-    })
+    });
+
+    let oldScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    document.addEventListener("scroll", (evt)=>{
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > oldScroll) {
+            const nav = document.querySelector("nav");
+            let navTopPos = parseInt(window.getComputedStyle(nav).top, 10);
+            let value = Math.min((navTopPos + 10), 900);
+            nav.style.top = value + "px";
+            
+        } else if (st < oldScroll) {
+            const nav = document.querySelector("nav");
+            let navTopPos = parseInt(window.getComputedStyle(nav).top, 10);
+            let value = Math.max((navTopPos - 10), 771);
+            nav.style.top = value + "px";
+        }
+        oldScroll = st <= 0 ? 0 : st;
+    }, false);
 })
