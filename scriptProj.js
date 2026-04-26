@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", (e)=>{
             start: "bottom-=18% bottom",
             end: "+=50%",
             scrub: true,
-            markers: true
         }
     })
 })
