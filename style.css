@@ -855,8 +855,18 @@ Media query min width 1506
 }
 
 @media screen and (max-width: 650px) {
+    nav{
+        gap: 1rem;
+        padding: .7rem 1.4rem;
+    }
+    .gif-container .gif{
+        background-size: cover;
+    }
     #footer-name{
         font-size: 2rem;
+    }
+    #footer-left-text{
+        font-size: .8rem;
     }
     .pages-links-container a{
         font-size: 1rem;
@@ -871,22 +881,31 @@ Media query min width 1506
         font-size: .8rem;
     }
     .project-title-heading{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .project-sub-heading{
-        font-size: .8rem;
+        font-size: .6rem;
     }
     .project-decscription-text{
-        font-size: 1rem;
+        font-size: .7rem;
     }
     .tech-stack-container p{
-        font-size: .8rem;
+        font-size: .5rem;
     }
     .overview-p-container p{
         font-size: 1.2rem;
     }
     #hero-github-icon{
         width: 30px;
+    }
+    .hero-section-container{
+        justify-content: unset;
+    }
+    .elements-container{
+        margin-top: 30rem;
+    }
+    .gif-container .gif{
+        height: 400px;
     }
 }
 
@@ -913,9 +932,6 @@ Media query min width 1506
     #explore-more-button{
         margin-top: 5rem;
     }
-}
-
-@media screen and (max-width: 450px) {
     #java-associate-header {
         font-size: 1.4rem;
     }
@@ -949,6 +965,9 @@ Media query min width 1506
     #footer-name{
         font-size: 1.5rem;
     }
+    #footer-left-text{
+        font-size: .6rem;
+    }
     .pages-links-container a {
         font-size: .8rem;
     }
@@ -980,7 +999,7 @@ Projects page
 }
 .project-page-section{
     padding: 0 120px;
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
 }
 .project-page-heading-container{
     margin-bottom: 4rem;
@@ -1125,6 +1144,7 @@ Projects page
 @media screen and (max-width: 700px) {
     .project-page-section{
         padding: 0 60px;
+        margin-bottom: 15rem;
     }
 }
 @media screen and (max-width: 600px){

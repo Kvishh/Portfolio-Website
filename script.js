@@ -173,7 +173,6 @@ mmProjectHeading.add("(max-width: 550px)", ()=>{
 const cardWrappers = gsap.utils.toArray(".project-card-wrapper");
 const cards = gsap.utils.toArray(".project-card-container");
 
-const mmProjectsCards = gsap.matchMedia();
 cardWrappers.forEach((wrapper, i) => {
     const card = cards[i];
     
@@ -286,17 +285,21 @@ let oldScroll = window.pageYOffset || document.documentElement.scrollTop;
 
 document.addEventListener("scroll", (evt)=>{
     let st = window.pageYOffset || document.documentElement.scrollTop;
+    const vieportHeight = window.innerHeight;
+
     if (st > oldScroll) {
-        const nav = document.querySelector("nav");
-        let navTopPos = parseInt(window.getComputedStyle(nav).top, 10);
-        let value = Math.min((navTopPos + 10), 900);
-        nav.style.top = value + "px";
+        const nav = document.querySelector("nav"); // down
+        const topPx = nav.offsetTop;
+        const topPercent = (topPx / vieportHeight) * 100;
+        const value = Math.min((topPercent + 1), 105);
+        nav.style.top = value + "%";
         
     } else if (st < oldScroll) {
-        const nav = document.querySelector("nav");
-        let navTopPos = parseInt(window.getComputedStyle(nav).top, 10);
-        let value = Math.max((navTopPos - 10), 771);
-        nav.style.top = value + "px";
+        const nav = document.querySelector("nav"); // up
+        const topPx = nav.offsetTop;
+        const topPercent = (topPx / vieportHeight) * 100;
+        const value = Math.max((topPercent - 1), 90);
+        nav.style.top = value + "%";
     }
     oldScroll = st <= 0 ? 0 : st;
 }, false);
