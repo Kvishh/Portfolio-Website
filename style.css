@@ -595,11 +595,11 @@ Media query min width 1600px
         max-width: 100%;
         min-height: 9rem;
         height: 9rem;
-        max-height: 15rem;
         background-color: #1a1d2c;
         resize: vertical;
         padding: 1rem;
         font-size: .9rem;
+        resize: none;
     }
     #submit-button{
         margin-top: 2rem;
@@ -677,6 +677,16 @@ Media query min width 1600px
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
+    }
+    #back-to-top-link{
+        font-family: "Public Sans", sans-serif;
+        font-size: 1.2rem;
+        background-color: transparent;
+        color: rgb(170, 170, 170);
+    }
+    #back-to-top-link:hover{
+        cursor: pointer;
+        color: white;
     }
 }
 
